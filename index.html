@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>STARTCODE SOLUTION</title>
+ <link rel="stylesheet" href="style.css" />
+ <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+</head>
+
+<body>
+    <header>
+    <img src="img/logo.png" height="15%" width="15%">
+        <nav>
+            <ul>
+                <li><a href="#">Início</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Softwares</a>
+                    <ul  class="submenu">
+                        <li><a href="#"></a>codigo1</li>
+                        <li><a href="#"></a>codigo2</li>
+                        <li><a href="#"></a>codigo2</li>
+                        <li><a href="#"></a>codigo4</li>
+                        <li><a href="#"></a>codigo5</li>
+                    </ul>
+                </li>
+                <li><a href="#">Contatos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+
+        <b>
+        <div class="titulo-secundario"><p>Venha conhecer nossos serviços e os Desenvolvedores que trabalham para entregar o melhor produto e em
+        menor tempo.</p>
+        </div>
+        </b>
+
+        <h2 class="codigo">Código do Software</h2>
+
+        <pre><code class="texto">
+        import { Component, OnInit } from '@angular/core';
+        import { ActivatedRoute } from '@angular/router';
+        import { PlantsService } from '../services/plants.service';
+
+        @Component({
+        selector: 'app-plant-details',
+        templateUrl: './plant-details.page.html',
+        styleUrls: ['./plant-details.page.scss'],
+        })
+        export class PlantDetailsPage implements OnInit {
+        public plant: any;
+
+        constructor(
+        private activatedRoute: ActivatedRoute,
+        private plantsService: PlantsService
+        ) {}
+
+        ngOnInit() {
+        const id = this.activatedRoute.snapshot.paramMap.get('id');
+        this.plant = this.plantsService.getPlantById(id);
+        }
+        }
+        </code></pre>
+
+        <div>
+        <br>
+        <hr color="#169e44">
+
+        <h3 class="descricao">Descrição do software</h3>
+        <article>        
+        <p>Um aplicativo de jardinagem que ilustra as práticas recomendadas de desenvolvimento do Android com o
+        Android Jetpack.</p>
+
+        <p>Este projeto usa o sistema de compilação Gradle. Para construir este projeto use  o  gradiew
+        buildcomando ou use "Import Project" no Android Studio.</p>
+         
+        <p>Existem duas tarefas Gradle para testar o projeto:connectedAndroidTest- para executar o Espresso em
+        um dispositivo conectado test- para executar testes de unidade.</p>
+
+        <div class="exibição">
+        <img src="img/cap1.png" height="30%" width="30%">
+        <img src="img/cap2.png" height="30%" width="30%">
+        <img src="img/cap3.png" height="30%" width="30%">
+        </div>
+
+        <hr color="#ADFF2F">
+
+        </div>
+
+        <h3 class="informacoes">Informações do Programador</h3>
+
+        <div class="circle">
+            <img src="img/PerfilProgramador.png " alt="Foto de um homem" class="social">
+        </div>
+
+        <div class="informativosProgramador">
+            <p><strong>Rodrigo Alves da Silva </strong><br>
+            <p><strong>Desenvolvedor de Software</strong></p>
+            <p>Nascido em São Paulo - SP, Brasil</p>
+            <p>Atualmente mora em Santo André - SP, Brasil </p>
+            <p>Idade: 31 anos</p>
+            <p>Formação Acadêmica: Ciência da Computação 2017 - 2021 Universidade Nove de Julho</p>
+         </div>
+
+             <p class="historia">Rodrigo começou a ter curiosidade pela programação desde os seus 12 anos de idade, sentindo a vontade
+            de conhecer um pouco sobre a área de Tecnologia, sempre
+            saia de sua casa em direção a Banca de Jornal que ficava bem na esquina de onde morava, se
+            encontrava com seus amigos e conversavam, até ele olhar na vitrine
+            de jornais e viu uma revista que descrevia sobre a área de programação, ficou tão feliz que pediu
+            para o dono da banca que deixasse ele ler. O dono viu a alegria dele e autorizou a leitura. Ele
+            gostou tanto que teve sua Formação Acadêmica em Ciencia da Computação.
+            Hoje Rodrigo Trabalha em parceria conosco e não medirá esforços para trazer um padrão de qualidade
+            nos Softwares deselvolvidos em prol de bons resultados e a satisfação de nossos clientes.</p>
+
+            <p><img src="img/twitter.png" width="24" height="24" class="social"> @rodrigo_alves</p>
+            <br>
+            <a href="https://github.com/RodrigoAlvesSil" target=" _blank " rel=" noopener noreferrer ">
+            <img src="img/github-1.svg" width="30" height="30" align: bottom >
+            </a>Github</p>
+            <a href="https://www.youtube.com/@TecnologiaRodrigo/about" target=" _blank " rel=" noopener noreferrer ">
+            <img src="img/Youtube.png" width="100" height="25" align: left class="social">
+            </a>Youtube</p>
+        </div>
+    </article>
+    </main>
+</body>
+<footer> 
+    <img src="img/logo1.png"> 
+    <p class="copyright">&copy; Copyright Startcode Solution - 2019</p> 
+</footer>
+</html>
